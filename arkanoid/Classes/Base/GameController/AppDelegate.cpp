@@ -1,7 +1,7 @@
-
 #include "AppDelegate.h"
-#include "Scenes/SplashScene.h"
-#include "Scenes/MainMenuScene.h"
+#include "States/MainMenuState.h"
+#include "States/SplashState.h"
+#include "States/PlayState.h"
 
 // #define USE_AUDIO_ENGINE 1
 
@@ -86,12 +86,14 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     register_all_packages();
 
-    // create a scene. it's an autorelease object
-    auto scene = MainMenuScene::createScene();
+    stateMachine = std::make_shared<StateMachine>(States::Splash, std::make_shared<SplashState>(stateMachine));
+    // Add game states to the StateMachine
 
-    // run
-    director->runWithScene(scene);
+    stateMachine->addState(States::Splash, std::make_shared<SplashState>(stateMachine));
+    stateMachine->addState(States::Menu, std::make_shared<MainMenuState>(stateMachine));
+    stateMachine->addState(States::Play,std::make_shared<PlayState>(stateMachine));
 
+    stateMachine->changeState(States::Splash);
     return true;
 }
 
