@@ -32,7 +32,7 @@
 *.app
 
 # Allow specific directories
-!Classes/
-!Resources/
+!arkanoid/Classes/
+!arkanoid/Resources/
 
 
