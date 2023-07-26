@@ -19,18 +19,14 @@ bool SplashScene::init()
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
-    createBackground();
+    createBackground(visibleSize,origin);
 
     return true;
 }
 
-void SplashScene::createBackground()
+void SplashScene::createBackground(Size visibleSize,Vec2 origin)
 {
-    auto visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-
     auto sprite=Sprite::create("splashBackground.png");
-
     sprite->setPosition(Vec2(visibleSize.width/2 +origin.x,visibleSize.height/2+origin.y));
 
     float scaleX = visibleSize.width / sprite->getContentSize().width;

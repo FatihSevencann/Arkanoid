@@ -19,17 +19,12 @@ bool MainMenuScene::init()
     }
     auto visibleSize = Director::getInstance()->getVisibleSize();
 
-
     createMenuBackground(visibleSize);
     createMenuLabel(visibleSize);
     createPlayButton(visibleSize);
     createCharacterButton(visibleSize);
     createMissionButton(visibleSize);
-
-
-
     return true;
-
 }
 
 void MainMenuScene::createPlayButton(cocos2d::Size visibleSize)

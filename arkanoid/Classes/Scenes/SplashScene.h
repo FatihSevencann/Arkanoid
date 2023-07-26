@@ -12,7 +12,7 @@ public:
 
     CREATE_FUNC(SplashScene);
 private:
-    void createBackground();
+    void createBackground(Size size,Vec2 origin);
 
 };
 
