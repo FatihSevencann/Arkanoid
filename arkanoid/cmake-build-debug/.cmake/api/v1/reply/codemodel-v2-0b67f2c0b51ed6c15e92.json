@@ -1,0 +1,804 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "engine/cocos/core",
+					"childIndexes" : 
+					[
+						2
+					],
+					"jsonFile" : "directory-engine.cocos.core-Debug-b253acb54ec31a3f0032.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "cocos2d/cocos",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "engine/external",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26
+					],
+					"jsonFile" : "directory-engine.external-Debug-a94fbfcec00efde252c0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "cocos2d/external",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "engine/external/Box2D",
+					"jsonFile" : "directory-engine.external.Box2D-Debug-abf59c4e7ce29da56dba.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 3,
+					"source" : "cocos2d/external/Box2D"
+				},
+				{
+					"build" : "engine/external/chipmunk",
+					"jsonFile" : "directory-engine.external.chipmunk-Debug-f101aefdd23607add1a3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 4,
+					"source" : "cocos2d/external/chipmunk"
+				},
+				{
+					"build" : "engine/external/freetype2",
+					"jsonFile" : "directory-engine.external.freetype2-Debug-afbaaf0ba835b095f133.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 5,
+					"source" : "cocos2d/external/freetype2"
+				},
+				{
+					"build" : "engine/external/recast",
+					"jsonFile" : "directory-engine.external.recast-Debug-a4b28da67bf03a6f071a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 6,
+					"source" : "cocos2d/external/recast",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "engine/external/bullet",
+					"jsonFile" : "directory-engine.external.bullet-Debug-e88fac937ea9e0218cd6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 7,
+					"source" : "cocos2d/external/bullet"
+				},
+				{
+					"build" : "engine/external/jpeg",
+					"jsonFile" : "directory-engine.external.jpeg-Debug-ba497f31eee14ddbbb93.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 8,
+					"source" : "cocos2d/external/jpeg"
+				},
+				{
+					"build" : "engine/external/openssl",
+					"jsonFile" : "directory-engine.external.openssl-Debug-9c8eb04d84ab7ecc5ea5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 9,
+					"source" : "cocos2d/external/openssl"
+				},
+				{
+					"build" : "engine/external/uv",
+					"jsonFile" : "directory-engine.external.uv-Debug-0e0fd92d9b6fcc09e241.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 10,
+					"source" : "cocos2d/external/uv"
+				},
+				{
+					"build" : "engine/external/webp",
+					"jsonFile" : "directory-engine.external.webp-Debug-d59e142e756d7eab5c33.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 11,
+					"source" : "cocos2d/external/webp"
+				},
+				{
+					"build" : "engine/external/websockets",
+					"jsonFile" : "directory-engine.external.websockets-Debug-6037c3783600c11e4cd5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 12,
+					"source" : "cocos2d/external/websockets"
+				},
+				{
+					"build" : "engine/external/tinyxml2",
+					"jsonFile" : "directory-engine.external.tinyxml2-Debug-74696bcc19482aa39c0f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 13,
+					"source" : "cocos2d/external/tinyxml2",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "engine/external/xxhash",
+					"jsonFile" : "directory-engine.external.xxhash-Debug-534da34dc8faf32bbcbd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 14,
+					"source" : "cocos2d/external/xxhash",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "engine/external/xxtea",
+					"jsonFile" : "directory-engine.external.xxtea-Debug-e9abe1773bd664c55b50.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 15,
+					"source" : "cocos2d/external/xxtea",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "engine/external/clipper",
+					"jsonFile" : "directory-engine.external.clipper-Debug-e0166bbbc7b148371492.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 16,
+					"source" : "cocos2d/external/clipper",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "engine/external/edtaa3func",
+					"jsonFile" : "directory-engine.external.edtaa3func-Debug-8e01a339208f4434a571.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 17,
+					"source" : "cocos2d/external/edtaa3func",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "engine/external/ConvertUTF",
+					"jsonFile" : "directory-engine.external.ConvertUTF-Debug-dae3929f4eed023b6b62.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 18,
+					"source" : "cocos2d/external/ConvertUTF",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "engine/external/poly2tri",
+					"jsonFile" : "directory-engine.external.poly2tri-Debug-3515ad15238db2c6c425.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 19,
+					"source" : "cocos2d/external/poly2tri",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "engine/external/md5",
+					"jsonFile" : "directory-engine.external.md5-Debug-cbb72326dd28412f5d9a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 20,
+					"source" : "cocos2d/external/md5",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "engine/external/curl",
+					"jsonFile" : "directory-engine.external.curl-Debug-b077ce0f57fc042d1460.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 21,
+					"source" : "cocos2d/external/curl"
+				},
+				{
+					"build" : "engine/external/png",
+					"jsonFile" : "directory-engine.external.png-Debug-64d54f24861d60e966e3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 22,
+					"source" : "cocos2d/external/png"
+				},
+				{
+					"build" : "engine/external/glfw3",
+					"jsonFile" : "directory-engine.external.glfw3-Debug-d1bc3a1e19c9baf3eb07.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 23,
+					"source" : "cocos2d/external/glfw3"
+				},
+				{
+					"build" : "engine/external/zlib",
+					"jsonFile" : "directory-engine.external.zlib-Debug-e81046b38af6f1b5010b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 24,
+					"source" : "cocos2d/external/zlib"
+				},
+				{
+					"build" : "engine/external/unzip",
+					"jsonFile" : "directory-engine.external.unzip-Debug-e6a274a30d207fc3c8a3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 25,
+					"source" : "cocos2d/external/unzip",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "engine/external/glsl-optimizer",
+					"jsonFile" : "directory-engine.external.glsl-optimizer-Debug-595bb271e2ef66614e18.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 26,
+					"source" : "cocos2d/external/glsl-optimizer"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "arkanoid",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "cocos2d_libs",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26
+					],
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "external",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "box2d",
+					"parentIndex" : 2
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "chipmunk",
+					"parentIndex" : 2
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "freetype",
+					"parentIndex" : 2
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "recast",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "bullet",
+					"parentIndex" : 2
+				},
+				{
+					"directoryIndexes" : 
+					[
+						8
+					],
+					"name" : "jpeg",
+					"parentIndex" : 2
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "openssl",
+					"parentIndex" : 2
+				},
+				{
+					"directoryIndexes" : 
+					[
+						10
+					],
+					"name" : "uv",
+					"parentIndex" : 2
+				},
+				{
+					"directoryIndexes" : 
+					[
+						11
+					],
+					"name" : "webp",
+					"parentIndex" : 2
+				},
+				{
+					"directoryIndexes" : 
+					[
+						12
+					],
+					"name" : "websockets",
+					"parentIndex" : 2
+				},
+				{
+					"directoryIndexes" : 
+					[
+						13
+					],
+					"name" : "tinyxml2",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						14
+					],
+					"name" : "xxhash",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						15
+					],
+					"name" : "xxtea",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						16
+					],
+					"name" : "clipper",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						17
+					],
+					"name" : "edtaa3func",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						18
+					],
+					"name" : "convertUTF",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						19
+					],
+					"name" : "poly2tri",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						20
+					],
+					"name" : "md5",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						21
+					],
+					"name" : "curl",
+					"parentIndex" : 2
+				},
+				{
+					"directoryIndexes" : 
+					[
+						22
+					],
+					"name" : "png",
+					"parentIndex" : 2
+				},
+				{
+					"directoryIndexes" : 
+					[
+						23
+					],
+					"name" : "glfw3",
+					"parentIndex" : 2
+				},
+				{
+					"directoryIndexes" : 
+					[
+						24
+					],
+					"name" : "zlib",
+					"parentIndex" : 2
+				},
+				{
+					"directoryIndexes" : 
+					[
+						25
+					],
+					"name" : "unzip",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						26
+					],
+					"name" : "glsl_optimizer",
+					"parentIndex" : 2
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "arkanoid::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-arkanoid-Debug-f45a9acb945c55d78e04.json",
+					"name" : "arkanoid",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "cocos2d::@b17589fc6237857a1771",
+					"jsonFile" : "target-cocos2d-Debug-96d06cdb5e3237acf09a.json",
+					"name" : "cocos2d",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "ext_clipper::@33abc919e86db66c28b8",
+					"jsonFile" : "target-ext_clipper-Debug-ad76c92ada6d9a0e413f.json",
+					"name" : "ext_clipper",
+					"projectIndex" : 16
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "ext_convertUTF::@205c2f0e44a3b06b9b59",
+					"jsonFile" : "target-ext_convertUTF-Debug-84461b7754b57f4cf391.json",
+					"name" : "ext_convertUTF",
+					"projectIndex" : 18
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "ext_edtaa3func::@f3d42e550923b89477b0",
+					"jsonFile" : "target-ext_edtaa3func-Debug-17f1f111af967e681d5f.json",
+					"name" : "ext_edtaa3func",
+					"projectIndex" : 17
+				},
+				{
+					"directoryIndex" : 20,
+					"id" : "ext_md5::@82bef7d6fa8c2aa61808",
+					"jsonFile" : "target-ext_md5-Debug-4cd72f99677d7319e614.json",
+					"name" : "ext_md5",
+					"projectIndex" : 20
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "ext_poly2tri::@ce0bfd23a4070be0c5de",
+					"jsonFile" : "target-ext_poly2tri-Debug-8e89be21293f32c22a9b.json",
+					"name" : "ext_poly2tri",
+					"projectIndex" : 19
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "ext_recast::@49aedbc985f97720d891",
+					"jsonFile" : "target-ext_recast-Debug-691b12cfc417f4902717.json",
+					"name" : "ext_recast",
+					"projectIndex" : 6
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "ext_tinyxml2::@fd6ab661f4ee25a21ef0",
+					"jsonFile" : "target-ext_tinyxml2-Debug-0d8e86639911ad362e6f.json",
+					"name" : "ext_tinyxml2",
+					"projectIndex" : 13
+				},
+				{
+					"directoryIndex" : 25,
+					"id" : "ext_unzip::@05a8bf1aba81c1a16e64",
+					"jsonFile" : "target-ext_unzip-Debug-2f4f7390bfcb87693f91.json",
+					"name" : "ext_unzip",
+					"projectIndex" : 25
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "ext_xxhash::@11e20b8b9139209a045a",
+					"jsonFile" : "target-ext_xxhash-Debug-e72899d09611181c5664.json",
+					"name" : "ext_xxhash",
+					"projectIndex" : 14
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "ext_xxtea::@95546a4b2abc077b0042",
+					"jsonFile" : "target-ext_xxtea-Debug-b56a1d974105ca61e4f9.json",
+					"name" : "ext_xxtea",
+					"projectIndex" : 15
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "external::@62470bbe2074d04a1904",
+					"jsonFile" : "target-external-Debug-49d5290682e524a28133.json",
+					"name" : "external",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/fatihsevencan/Arkanoid/arkanoid/cmake-build-debug",
+		"source" : "/Users/fatihsevencan/Arkanoid/arkanoid"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
