@@ -1,21 +1,26 @@
 #pragma once
 #include "IState.h"
-#include "cocos2d.h"
+#include "Base/FSM/StateMachine.h"
+#include "Base/System/Events/Observer.h"
+#include "Base/System/Events/Events.h"
 
-class StateMachine;
-
-class SplashState: public IState{
+class SplashState : public Observer<Events>,public IState
+{
 public:
-    SplashState(std::shared_ptr<StateMachine> stateMachine);
-
+    SplashState(const int pId, std::shared_ptr<StateMachine> stateMachine, EventManager& eventManager);
     ~SplashState();
-private:
 
+    std::vector<Events> getEventTypes() const override {
+        return { Events::GAME_START };
+    }
+    void handleNotification(Events pEvent) override;
+
+private:
     void enter() override;
-    void execute()override;
+    void execute() override;
     void exit() override;
 
-    float elapsedTime = 0.0f;
-    const float splashDuration = 4.0f;
-    bool isExiting = false;
+    float mElapsedTime = 0.0f;
+    float mSplashDuration = 3.0f;
+    bool mIsExiting = false;
 };
