@@ -1,40 +1,73 @@
 #include "MainMenuScene.h"
 #include "ui/UIButton.h"
+#include "States/MainMenuState.h"
+
+
 USING_NS_CC;
 
 using namespace cocos2d::ui;
+class MainMenuState;
 
-Scene* MainMenuScene::createScene()
+Scene* MainMenuScene::createScene(EventManager* eventManager)
 {
-    auto scene=Scene::create();
-    auto layer=MainMenuScene::create();
+    auto scene = Scene::create();
+    auto layer = MainMenuScene::create(eventManager);
     scene->addChild(layer);
     return scene;
 }
-bool MainMenuScene::init()
+MainMenuScene* MainMenuScene::create(EventManager* eventManager)
 {
-    if ( !Layer::init() )
+    MainMenuScene* layer = new MainMenuScene();
+    if (layer && layer->init(eventManager))
+    {
+        layer->autorelease();
+        return layer;
+    }
+    else
+    {
+        delete layer;
+        return nullptr;
+    }
+}
+
+bool MainMenuScene::init(EventManager* eventManager)
+{
+    if (!Layer::init())
     {
         return false;
     }
+    mEventManager = eventManager;
     auto visibleSize = Director::getInstance()->getVisibleSize();
+    createMenuButtons(visibleSize);
 
+    return true;
+}
+
+#pragma region CreateButtons
+void MainMenuScene::createMenuButtons(cocos2d::Size visibleSize)
+{
     createMenuBackground(visibleSize);
     createMenuLabel(visibleSize);
     createPlayButton(visibleSize);
     createCharacterButton(visibleSize);
     createMissionButton(visibleSize);
-    return true;
 }
-
 void MainMenuScene::createPlayButton(cocos2d::Size visibleSize)
 {
-    auto playButton = Button::create("PlayButton.png", "");
+    auto playButton = Button::create("PlayButton.png","");
     playButton->setPosition(Vec2(visibleSize.width *1.2, visibleSize.height*0.35 ));
     playButton->setTag(0);
     this->addChild(playButton);
-}
 
+    playButton->addTouchEventListener([&](cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type) {
+        if (type == cocos2d::ui::Widget::TouchEventType::BEGAN)
+        {
+            CCLOG("Play button clicked");
+
+          mEventManager->notifyEvent(Events::GAME_PLAY);
+        }
+    });
+}
 void MainMenuScene::createCharacterButton(cocos2d::Size visibleSize)
 {
     auto characterButton = Button::create("characterSelectButton.jpg", "");
@@ -42,7 +75,6 @@ void MainMenuScene::createCharacterButton(cocos2d::Size visibleSize)
     characterButton->setTag(1);
     this->addChild(characterButton);
 }
-
 void MainMenuScene::createMissionButton(cocos2d::Size visibleSize)
 {
     auto missionButton = Button::create("missionButton.png", "");
@@ -50,6 +82,8 @@ void MainMenuScene::createMissionButton(cocos2d::Size visibleSize)
     missionButton->setTag(2);
     this->addChild(missionButton);
 }
+#pragma endregion
+
 void MainMenuScene::createMenuBackground(Size visibleSize)
 {
     auto sprite=Sprite::create("menuBackground.png");
@@ -59,10 +93,10 @@ void MainMenuScene::createMenuBackground(Size visibleSize)
     sprite->setScale(scaleX, scaleY);
     this->addChild(sprite);
 }
-
 void MainMenuScene::createMenuLabel(Size visibleSize )
 {
     auto label = Label::createWithTTF("MAIN MENU", "fonts/arial.ttf", 30);
     label->setPosition(Vec2(visibleSize.width*1.3f, visibleSize.height*0.8f));
     this->addChild(label);
 }
+
