@@ -3,7 +3,10 @@
 #define  _APP_DELEGATE_H_
 
 #include "cocos2d.h"
+#include "ui/UIButton.h"
 #include "Base/FSM/StateMachine.h"
+#include "App.h"
+
 
 /**
 @brief    The cocos2d Application.
@@ -37,7 +40,8 @@ public:
     */
     virtual void applicationWillEnterForeground();
 private:
-    std::shared_ptr<StateMachine> stateMachine;
+    App App;
+
 };
 
 #endif // _APP_DELEGATE_H_
