@@ -20,6 +20,7 @@ private:
     void execute() override;
     void exit() override;
 
+    Paddle *mPaddle;
 
 };
 
