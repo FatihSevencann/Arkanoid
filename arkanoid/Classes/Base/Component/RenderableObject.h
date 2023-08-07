@@ -20,3 +20,23 @@ protected:
     cocos2d::Sprite* sprite;
 };
 
+class MovableObject : public RenderableObject {
+public:
+    MovableObject(const cocos2d::Vec2& position, cocos2d::Sprite* sprite, float speed_rate,
+                  const cocos2d::Vec2& velocity);
+
+    virtual bool init() override;
+    virtual void update(float delta) override;
+
+    const cocos2d::Vec2& getVelocity() const;
+    void setVelocity(const cocos2d::Vec2& v);
+
+    void setVelocityX(float vx);
+    void setVelocityY(float vy);
+
+    float getMoveRate() const;
+
+protected:
+    cocos2d::Vec2 velocity;
+    float move_rate;
+};

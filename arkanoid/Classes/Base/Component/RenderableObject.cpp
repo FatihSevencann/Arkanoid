@@ -18,7 +18,6 @@
         return sprite->getPosition();
     }
 
-
     float RenderableObject::getLeft() const
     {
         return sprite->getPosition().x - sprite->getContentSize().width * sprite->getAnchorPoint().x;
@@ -37,7 +36,6 @@
     float RenderableObject::getBottom() const
     {
         return sprite->getPosition().y - sprite->getContentSize().height * sprite->getAnchorPoint().y;
-
     }
 
     void RenderableObject::setPosition(const cocos2d::Vec2& pos)
@@ -49,4 +47,48 @@
     {
         return this->getRight() >= another.getLeft() && this->getLeft() <= another.getRight() &&
                this->getBottom() >= another.getTop() && this->getTop() <= another.getBottom();
+    }
+
+    MovableObject::MovableObject(const cocos2d::Vec2& position, cocos2d::Sprite* sprite, float speed_rate,
+                                 const cocos2d::Vec2& vel) :
+            RenderableObject(position, sprite),
+            velocity(vel),
+            move_rate(speed_rate) {
+    }
+
+    bool MovableObject::init()
+    {
+        if (!MovableObject::init()) {
+            return false;
+        }
+
+        this->scheduleUpdate();
+
+        return true;
+    }
+
+    void MovableObject::update(float delta)
+    {
+        CCLOG("Paddle update called");
+        sprite->setPosition(sprite->getPosition() + velocity * delta);
+    }
+
+    const cocos2d::Vec2& MovableObject::getVelocity() const
+    {
+        return velocity;
+    }
+    void MovableObject::setVelocity(const cocos2d::Vec2& v)
+    {
+        velocity = v;
+    }
+    void MovableObject::setVelocityX(float vx)
+    {
+        velocity.x = vx;
+    }
+    void MovableObject::setVelocityY(float vy)
+    {
+        velocity.y = vy;
+    }
+    float MovableObject::getMoveRate() const {
+        return move_rate;
     }
