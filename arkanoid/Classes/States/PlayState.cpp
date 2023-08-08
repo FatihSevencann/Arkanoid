@@ -58,6 +58,7 @@ void PlayState::execute()
 }
 void PlayState::exit()
 {
+    mBall->detach(mPaddle);
 }
 void PlayState::handleNotification(Events pEvent)
 {
