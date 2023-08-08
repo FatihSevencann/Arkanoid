@@ -23,3 +23,12 @@ public:
         paddle.moveRight();
     }
 };
+
+class DefaultDirective:public MontionDirective
+{
+public:
+    void Execute(Paddle &paddle)
+    {
+        paddle.stayAtPlace();
+    }
+};
