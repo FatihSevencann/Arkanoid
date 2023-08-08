@@ -8,6 +8,13 @@ PlayState::PlayState(const int pId, std::shared_ptr<StateMachine> stateMachine,E
         : Observer<Events>(pId), IState(stateMachine,eventManager), mPaddle(nullptr),mBall(nullptr)
 {
     init(&eventManager);
+
+    mDefaultDirective=new DefaultDirective;
+    mButtonLeft=new MoveLeftDirective;
+    mButtonRight=new MoveRightDirective;
+    mCurrentDirective=mDefaultDirective;
+
+
 }
 
 PlayState::~PlayState()
