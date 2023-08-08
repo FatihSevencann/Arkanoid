@@ -46,8 +46,10 @@ bool GameScene::init(EventManager* eventManager,Paddle* paddle,Ball* ball)
     createGameBackground(visibleSize);
     createBackButton(visibleSize);
 
+    createPaddle(visibleSize ,mPaddle);
+    createBall(visibleSize,mBall);
 
-
+    this->scheduleUpdate();
     return true;
 }
 
@@ -76,8 +78,8 @@ GameScene::~GameScene() noexcept
 
 void GameScene::createGameLabel(Size visibleSize )
 {
-    auto label = Label::createWithTTF("MAIN MENU", "fonts/arial.ttf", 30);
-    label->setPosition(Vec2(visibleSize.width*1.3f, visibleSize.height*0.8f));
+    auto label = Label::createWithTTF("GAME SCENE", "fonts/arial.ttf", 30);
+    label->setPosition(Vec2(visibleSize.width*1.7f, visibleSize.height*0.8f));
     this->addChild(label);
 }
 
@@ -98,9 +100,25 @@ void GameScene::createBackButton(Size visibleSize)
     this->addChild(backButton);
 
     backButton->addTouchEventListener([=](Ref* sender, Widget::TouchEventType type) {
-        if (type == Widget::TouchEventType::BEGAN) {
-
+        if (type == Widget::TouchEventType::BEGAN)
+        {
             mEventManager->notifyEvent(Events::GAME_BACK);
         }
     });
+}
+void GameScene::createPaddle(Size visibleSize,Paddle *paddle)
+{
+    Size mPaddleSize = paddle->getSize()*0.5f;
+    Vec2 mPaddlePosition=Vec2(visibleSize.width*1.20f,visibleSize.height*0.15);
+    paddle->setPosition(mPaddlePosition);
+    paddle->setSize(mPaddleSize);
+    this->addChild(paddle);
+}
+void GameScene::createBall(Size visibleSize,Ball *ball)
+{
+    Size mBallSize=ball->getSize()*0.5f;
+    Vec2 mBallPosition=Vec2(visibleSize.width*1.20f,visibleSize.height*0.20);
+    ball->setPosition(mBallPosition);
+    ball->setSize(mBallSize);
+    this->addChild(ball);
 }
