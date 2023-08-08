@@ -25,6 +25,19 @@ PlayState::~PlayState()
     {
         delete mPaddle;
     }
+    if(mButtonLeft != nullptr)
+    {
+        delete mButtonLeft;
+    }
+    if(mButtonRight != nullptr)
+    {
+        delete mButtonRight;
+    }
+    if(mDefaultDirective != nullptr)
+    {
+        delete mDefaultDirective;
+    }
+}
 void PlayState::enter()
 {
     CCLOG("PlayState");
@@ -50,7 +63,6 @@ void PlayState::execute()
     else if (mBall->getRight()>mVisibleSize.width*0.67f)
         mBall->setVelocityX(-BALL_VELOCITY);
 
-}
     if(mBall->getTop() > mVisibleSize.height)
         mBall->setVelocityY(-BALL_VELOCITY);
 
@@ -74,6 +86,3 @@ void PlayState::handleNotification(Events pEvent)
         CCLOG("ChangeState");
         states->changeState(States::Menu);
     }
-
-
-}
