@@ -21,6 +21,7 @@ public:
     void moveRight();
     void stayAtPlace();
 
+    void handleBallPosChange(Ball *ball) override;
 
     void setSize(const cocos2d::Size& size);
     cocos2d::Size getSize() const;

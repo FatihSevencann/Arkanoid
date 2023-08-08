@@ -86,3 +86,15 @@ void Paddle::update(float delta)
     setPosition(getPosition() + getVelocity() * delta);
 }
 
+void Paddle::handleBallPosChange(Ball *ball)
+{
+   if(!isIntersects(*ball)) return;
+
+    if(ball->getPosition().x < getPosition().x                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       )
+        ball->setVelocityX(-ball->getMoveRate());
+    else
+        ball->setVelocityX(ball->getMoveRate());
+
+    ball->setVelocityY(ball->getMoveRate());
+
+}
