@@ -38,9 +38,24 @@ void PlayState::enter()
 
 void PlayState::execute()
 {
+    if(mBall->getLeft()<mVisibleSize.width *0.32f)
+         mBall->setVelocityX(BALL_VELOCITY);
+    else if (mBall->getRight()>mVisibleSize.width*0.67f)
+        mBall->setVelocityX(-BALL_VELOCITY);
 
 }
+    if(mBall->getTop() > mVisibleSize.height)
+        mBall->setVelocityY(-BALL_VELOCITY);
 
+    else if(mBall->getBottom() < 0)
+    {
+        mIsGameOver = true;
+        printf("GAME OVER");
+        return;
+    }
+    mBall->update(0.01);
+    mPaddle->update(0.01);
+}
 void PlayState::exit()
 {
 }
