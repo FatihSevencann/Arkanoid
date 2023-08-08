@@ -2,37 +2,46 @@
 #include "ui/UIButton.h"
 #include <memory>
 USING_NS_CC;
-
 using namespace cocos2d::ui;
 
-Scene* GameScene::createScene(EventManager* eventManager)
+Scene* GameScene::createScene(EventManager* eventManager,Paddle* paddle,Ball* ball)
 {
     auto scene=Scene::create();
-    auto layer=GameScene::create(eventManager);
+    auto layer=GameScene::create(eventManager,paddle,ball);
     scene->addChild(layer);
+
     return scene;
 }
 
-GameScene* GameScene::create(EventManager* eventManager)
+GameScene* GameScene::create(EventManager* eventManager,Paddle* paddle,Ball* ball)
 {
     std::unique_ptr<GameScene> layer(new GameScene());
-    if (layer && layer->init(eventManager))
+
+    if (layer && layer->init(eventManager,paddle,ball))
     {
         return layer.release();
     }
+
     else
     {
         return nullptr;
     }
 }
 
-bool GameScene::init(EventManager* eventManager)
+bool GameScene::init(EventManager* eventManager,Paddle* paddle,Ball* ball)
 {
     if (!Layer::init()) {
         return false;
     }
     mEventManager = eventManager;
+    mPaddle=paddle;
+    mBall=ball;
+
     auto visibleSize = Director::getInstance()->getVisibleSize();
+
+    std::cout << "Visible Size - Width: " << visibleSize.width << " Height: " << visibleSize.height << std::endl;
+
+
     createGameLabel(visibleSize);
     createGameBackground(visibleSize);
     createBackButton(visibleSize);
@@ -41,6 +50,28 @@ bool GameScene::init(EventManager* eventManager)
 
     return true;
 }
+
+void GameScene::update(float delta)
+{
+    if (mPaddle != nullptr)
+    {
+        mPaddle->scheduleUpdate();
+    }
+    if(mBall != nullptr)
+    {
+        mBall->scheduleUpdate();
+    }
+}
+GameScene::~GameScene() noexcept
+{
+    if (mPaddle != nullptr)
+    {
+        delete mPaddle;
+    }
+    if(mBall!= nullptr)
+    {
+        delete mBall;
+    }
 }
 
 void GameScene::createGameLabel(Size visibleSize )
