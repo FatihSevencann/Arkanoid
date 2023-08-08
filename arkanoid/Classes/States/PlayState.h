@@ -2,6 +2,7 @@
 #include "States//IState.h"
 #include "Base/System/Events/Observer.h"
 #include "Base/FSM/StateMachine.h"
+#include "Base/System/Movement/MontionDirective.h"
 #include "Scenes/GameScene.h"
 
 extern const float BALL_VELOCITY;
@@ -31,6 +32,10 @@ private:
     bool mIsClickedButton=false;
     bool mIsGameOver=false;
 
-};
+    MontionDirective *mCurrentDirective;
+    MontionDirective *mButtonLeft;
+    MontionDirective *mButtonRight;
+    MontionDirective *mDefaultDirective;
 
+    };
 
