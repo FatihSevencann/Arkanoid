@@ -48,6 +48,7 @@ bool GameScene::init(EventManager* eventManager,Paddle* paddle,Ball* ball)
 
     createPaddle(visibleSize ,mPaddle);
     createBall(visibleSize,mBall);
+    CreateLeftButton(visibleSize);
 
     this->scheduleUpdate();
     return true;
@@ -121,4 +122,24 @@ void GameScene::createBall(Size visibleSize,Ball *ball)
     ball->setPosition(mBallPosition);
     ball->setSize(mBallSize);
     this->addChild(ball);
+}
+
+void GameScene::CreateLeftButton(cocos2d::Size visibleSize)
+{
+    auto mLeftButton=Button::create("Left_Button.png","");
+    mLeftButton->setPosition(Vec2(visibleSize.width*0.9f,visibleSize.height*0.075f));
+    this->addChild(mLeftButton);
+
+    mLeftButton->addTouchEventListener([=](Ref* sender, Widget::TouchEventType type) {
+        if (type == Widget::TouchEventType::BEGAN)
+        {
+            isMovingLeft=true;
+            mEventManager->notifyEvent(Events::BUTTON_LEFT);
+        }
+        else if (type == Widget::TouchEventType::ENDED||type == Widget::TouchEventType::MOVED ) {
+            isMovingLeft = false;
+            mPaddle->stayAtPlace();
+        }
+    });
+}
 }
