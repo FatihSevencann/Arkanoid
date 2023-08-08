@@ -4,7 +4,6 @@
 
 SplashState::SplashState(const int pId, std::shared_ptr<StateMachine> stateMachine,EventManager& eventManager):Observer<Events>(pId), IState(stateMachine,eventManager)
 {
-    states = stateMachine;
 }
 SplashState::~SplashState()
 {

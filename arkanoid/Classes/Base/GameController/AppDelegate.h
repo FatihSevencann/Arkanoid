@@ -3,8 +3,6 @@
 #define  _APP_DELEGATE_H_
 
 #include "cocos2d.h"
-#include "ui/UIButton.h"
-#include "Base/FSM/StateMachine.h"
 #include "App.h"
 
 
