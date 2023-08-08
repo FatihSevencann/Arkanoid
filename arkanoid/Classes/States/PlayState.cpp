@@ -86,3 +86,23 @@ void PlayState::handleNotification(Events pEvent)
         CCLOG("ChangeState");
         states->changeState(States::Menu);
     }
+    else
+    {
+        if(pEvent==Events::BUTTON_LEFT && mPaddle->getLeft()>mVisibleSize.width *0.32f)
+        {
+            mCurrentDirective=mButtonLeft;
+            mIsClickedButton=true;
+        }
+        if(pEvent==Events::BUTTON_RIGHT && mPaddle->getRight()< mVisibleSize.width*0.67f)
+        {
+            mIsClickedButton=true;
+            mCurrentDirective=mButtonRight;
+        }
+
+        if(mCurrentDirective!= nullptr&& mPaddle != nullptr && mIsClickedButton)
+        {
+            mCurrentDirective->Execute(*mPaddle);
+        }
+        mIsClickedButton= false;
+    }
+}
