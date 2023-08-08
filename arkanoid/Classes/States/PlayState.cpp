@@ -1,32 +1,41 @@
 #include "PlayState.h"
-#include "Scenes/GameScene.h"
+
+const float BALL_VELOCITY=50.0f;
+const float PADDLE_VELOCITY=75.0f;
+
 
 PlayState::PlayState(const int pId, std::shared_ptr<StateMachine> stateMachine,EventManager& eventManager)
-        : Observer<Events>(pId), IState(stateMachine,eventManager)
-        : Observer<Events>(pId), IState(stateMachine,eventManager), mPaddle(nullptr)
+        : Observer<Events>(pId), IState(stateMachine,eventManager), mPaddle(nullptr),mBall(nullptr)
 {
     init(&eventManager);
 }
 
 PlayState::~PlayState()
 {
-}
+    mEventManager->detach(this);
 
- mEventManager->detach(this);
     if(mPaddle!= nullptr)
     {
         delete mPaddle;
     }
 void PlayState::enter()
 {
-    auto playScene=GameScene::createScene();
-    cocos2d::Director::getInstance()->runWithScene(playScene);
+    CCLOG("PlayState");
     mEventManager->attach(this);
-    auto gameScene = GameScene::createScene(mEventManager);
-    mPaddle= new Paddle(Vec2::ZERO, "paddle.png", 75.f);
-    auto gameScene = GameScene::createScene(mEventManager,mPaddle);
+
+    mPaddle= new Paddle(Vec2::ZERO, "paddle.png", PADDLE_VELOCITY);
+
+    mBall=new Ball(Vec2::ZERO,"ball.png",BALL_VELOCITY);
+
+    mBall->attach(mPaddle);
+
+    auto gameScene = GameScene::createScene(mEventManager,mPaddle,mBall);
     Director::getInstance()->replaceScene(gameScene);
+
+    mVisibleSize = gameScene->getContentSize();
+
 }
+
 void PlayState::execute()
 {
 
