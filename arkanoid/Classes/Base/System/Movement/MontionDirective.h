@@ -15,3 +15,11 @@ class MoveLeftDirective:public MontionDirective
     }
 };
 
+class MoveRightDirective:public MontionDirective
+{
+public:
+    void Execute(Paddle &paddle)
+    {
+        paddle.moveRight();
+    }
+};
