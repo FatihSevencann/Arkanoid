@@ -69,12 +69,43 @@ Brick *Brick::Clone()
 {
     return new Brick(cocos2d::Vec2(getPosition().x,getPosition().y),"Bricks/pinkBrick.png",3);
 }
-
 void Brick::onHit()
 {
     mLifeDuration--;
     UpdateBrickTypes();
 }
+
+BrickSpawner::BrickSpawner(cocos2d::Vec2)
+{
+    mEasyBrick=new Brick(cocos2d::Vec2::ZERO,"Bricks/brickRed.png",1);
+    mMediumBrick=new Brick(cocos2d::Vec2::ZERO,"Bricks/brickBlue",2);
+    mStrongBrick=new Brick(cocos2d::Vec2::ZERO,"Bricks/pinkBrick",3);
+}
+BrickSpawner::~BrickSpawner()
+{
+    delete mEasyBrick;
+    delete mMediumBrick;
+    delete mStrongBrick;
+}
+Brick *BrickSpawner::getBrick(int type) const
+{
+    Brick *out= nullptr;
+
+    switch (type)
+    {
+        case 3:
+            out=mStrongBrick->Clone();
+            break;
+        case 2:
+            out=mMediumBrick->Clone();
+            break;
+        case 1:
+            out=mEasyBrick->Clone();
+            break;
+    }
+    return out;
+}
+
 
 
 
