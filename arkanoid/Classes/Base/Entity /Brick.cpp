@@ -75,6 +75,30 @@ void Brick::onHit()
     UpdateBrickTypes();
 }
 
+void Brick::handleBallPosChange(Ball *ball)
+{
+    if(!RenderableObject::isIntersects(*ball)) return;
+    onHit();
+
+    float mOverlapXFromLeft=ball->getRight()-getLeft();
+    float mOverlapXFromRight=getRight()-ball->getLeft();
+    float mOverlapYFromTop=ball->getBottom()-getTop();
+    float mOverlapYFromBottom=getBottom()-ball->getTop();
+
+    bool mBallFromLeft=std::abs(mOverlapXFromLeft)< abs(mOverlapXFromRight);
+    bool mBallFromTop=std::abs(mOverlapYFromTop)< abs(mOverlapYFromBottom);
+
+    float mMinOverlapX=mBallFromLeft ? mOverlapXFromLeft: mOverlapXFromRight;
+    float mMinOverlapY=mBallFromTop ? mOverlapYFromTop : mOverlapYFromBottom;
+
+    if(std::abs(mMinOverlapX) < std::abs(mMinOverlapY))
+    {
+        ball->setVelocityX(mBallFromLeft?-ball->getMoveRate():ball->getMoveRate());
+    }
+    else
+        ball->setVelocityY(mBallFromTop? -ball->getMoveRate():ball->getMoveRate());
+}
+
 BrickSpawner::BrickSpawner(cocos2d::Vec2)
 {
     mEasyBrick=new Brick(cocos2d::Vec2::ZERO,"Bricks/brickRed.png",1);
@@ -105,9 +129,6 @@ Brick *BrickSpawner::getBrick(int type) const
     }
     return out;
 }
-
-
-
 
 
 
