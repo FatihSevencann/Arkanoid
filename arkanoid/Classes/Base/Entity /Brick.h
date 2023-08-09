@@ -27,3 +27,17 @@ private:
     cocos2d::Size mBrickSize;
 };
 
+class BlockSpawner
+{
+public:
+    BlockSpawner(cocos2d::Vec2);
+    ~BlockSpawner();
+
+    Brick* getBrick(int type)const;
+
+private:
+    Brick *mEasyBrick;
+    Brick *mMediumBrick;
+    Brick *mStrongBrick;
+};
+
