@@ -1,6 +1,7 @@
 #pragma once
 #include "Ball.h"
 #include "Base/Component/RenderableObject.h"
+
 class Brick: public RenderableObject,public IObserver{
 public:
 
@@ -26,12 +27,11 @@ private:
     void UpdateBrickTypes();
     cocos2d::Size mBrickSize;
 };
-
-class BlockSpawner
+class BrickSpawner
 {
 public:
-    BlockSpawner(cocos2d::Vec2);
-    ~BlockSpawner();
+    BrickSpawner(cocos2d::Vec2);
+    ~BrickSpawner();
 
     Brick* getBrick(int type)const;
 
