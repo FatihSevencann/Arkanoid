@@ -2,14 +2,15 @@
 
 Brick::Brick(const cocos2d::Vec2 vec2, const std::string &spriteFile, int durability): RenderableObject(vec2,cocos2d::Sprite::create(spriteFile))
 {
-
     mLifeDuration=(durability<=3 && durability>0)?durability:3;
     UpdateBrickTypes();
     mBrickSize=dynamic_cast<cocos2d::Sprite*>(sprite)->getContentSize();
 }
 Brick::~Brick() noexcept
 {
-
+    if (sprite!= nullptr)
+        delete dynamic_cast<cocos2d::Sprite*>(sprite);
+    sprite= nullptr;
 }
 void Brick::UpdateBrickTypes()
 {
@@ -60,6 +61,22 @@ float Brick::getBottom() const
 {
     return getPosition().y-mBrickSize.height/2;
 }
+bool Brick::isAlive() const
+{
+    return mLifeDuration!=0;
+}
+Brick *Brick::Clone()
+{
+    return new Brick(cocos2d::Vec2(getPosition().x,getPosition().y),"Bricks/pinkBrick.png",3);
+}
+
+void Brick::onHit()
+{
+    mLifeDuration--;
+    UpdateBrickTypes();
+}
+
+
 
 
 

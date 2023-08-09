@@ -9,7 +9,6 @@ public:
 
     float getWidth()const;
     float getHeight()const;
-
     void setSize(const cocos2d::Size& size);
     cocos2d::Size getSize() const;
 
@@ -18,7 +17,9 @@ public:
     float getTop()const override;
     float getBottom()const override;
 
+    Brick* Clone();
     bool isAlive()const;
+    void onHit();
     void handleBallPosChange(Ball *ball) override;
 private:
     int mLifeDuration;
