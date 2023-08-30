@@ -8,6 +8,13 @@ PlayState::PlayState(const int pId, std::shared_ptr<StateMachine> stateMachine,E
         : Observer<Events>(pId), IState(stateMachine,eventManager), mPaddle(nullptr),mBall(nullptr)
 {
     init(&eventManager);
+
+    mDefaultDirective=new DefaultDirective;
+    mButtonLeft=new MoveLeftDirective;
+    mButtonRight=new MoveRightDirective;
+    mCurrentDirective=mDefaultDirective;
+
+
 }
 
 PlayState::~PlayState()
@@ -18,6 +25,19 @@ PlayState::~PlayState()
     {
         delete mPaddle;
     }
+    if(mButtonLeft != nullptr)
+    {
+        delete mButtonLeft;
+    }
+    if(mButtonRight != nullptr)
+    {
+        delete mButtonRight;
+    }
+    if(mDefaultDirective != nullptr)
+    {
+        delete mDefaultDirective;
+    }
+}
 void PlayState::enter()
 {
     CCLOG("PlayState");
@@ -43,7 +63,6 @@ void PlayState::execute()
     else if (mBall->getRight()>mVisibleSize.width*0.67f)
         mBall->setVelocityX(-BALL_VELOCITY);
 
-}
     if(mBall->getTop() > mVisibleSize.height)
         mBall->setVelocityY(-BALL_VELOCITY);
 
@@ -67,6 +86,23 @@ void PlayState::handleNotification(Events pEvent)
         CCLOG("ChangeState");
         states->changeState(States::Menu);
     }
+    else
+    {
+        if(pEvent==Events::BUTTON_LEFT && mPaddle->getLeft()>mVisibleSize.width *0.32f)
+        {
+            mCurrentDirective=mButtonLeft;
+            mIsClickedButton=true;
+        }
+        if(pEvent==Events::BUTTON_RIGHT && mPaddle->getRight()< mVisibleSize.width*0.67f)
+        {
+            mIsClickedButton=true;
+            mCurrentDirective=mButtonRight;
+        }
 
-
+        if(mCurrentDirective!= nullptr&& mPaddle != nullptr && mIsClickedButton)
+        {
+            mCurrentDirective->Execute(*mPaddle);
+        }
+        mIsClickedButton= false;
+    }
 }

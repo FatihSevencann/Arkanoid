@@ -1,6 +1,5 @@
 #include "StateMachine.h"
 #include "States/IState.h"
-
 StateMachine::~StateMachine()
 {
 }
@@ -16,20 +15,16 @@ void StateMachine::addState(States::statesCode stateID, std::shared_ptr<IState> 
 void StateMachine::changeState(States::statesCode changeState)
 {
     currentState->setExit();
-
     std::shared_ptr<IState> nextState = states.at(changeState);
-
     nextState->setEnter();
-
     currentStateID = changeState;
     currentState = nextState;
 }
-
-std::shared_ptr<IState> StateMachine::getState() const {
+std::shared_ptr<IState> StateMachine::getState() const
+{
     return currentState;
 }
-
-void StateMachine::update() {
+void StateMachine::update(float dt) {
     if (currentState) {
         currentState->setExecute();
     }

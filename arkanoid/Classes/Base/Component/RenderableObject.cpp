@@ -1,4 +1,5 @@
-    #include "RenderableObject.h"
+#include "RenderableObject.h"
+#include <iostream>
 
     RenderableObject::RenderableObject(const cocos2d::Vec2& position, cocos2d::Sprite* sprite)
     {
@@ -46,7 +47,7 @@
     bool RenderableObject::isIntersects(const GameObject& another) const
     {
         return this->getRight() >= another.getLeft() && this->getLeft() <= another.getRight() &&
-               this->getBottom() >= another.getTop() && this->getTop() <= another.getBottom();
+               this->getBottom() <= another.getTop() && this->getTop() >= another.getBottom();
     }
 
     MovableObject::MovableObject(const cocos2d::Vec2& position, cocos2d::Sprite* sprite, float speed_rate,
