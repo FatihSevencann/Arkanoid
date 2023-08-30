@@ -1,0 +1,922 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "bin/arkanoid/arkanoid.app/Contents/MacOS/arkanoid"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"set_property",
+			"use_cocos2dx_libs_depend",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"cocos2d/cocos/CMakeLists.txt",
+			"cocos2d/external/CMakeLists.txt",
+			"cocos2d/external/bullet/CMakeLists.txt",
+			"cocos2d/cmake/Modules/CocosConfigDepend.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 125,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 132,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 110,
+				"parent" : 3
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 30,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 34,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 38,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 42,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 46,
+				"parent" : 5
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 63,
+				"parent" : 11
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 60,
+				"parent" : 11
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 56,
+				"parent" : 11
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 66,
+				"parent" : 11
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 69,
+				"parent" : 11
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 50,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 63,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 67,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 54,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 55,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 59,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 71,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 75,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 79,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 83,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 87,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 91,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 95,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 100,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 117,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 120,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 160,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 168,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 177,
+				"parent" : 5
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 191,
+				"parent" : 5
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 117,
+				"parent" : 3
+			},
+			{
+				"command" : 1,
+				"file" : 4,
+				"line" : 94,
+				"parent" : 37
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 133,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -fcolor-diagnostics"
+				},
+				{
+					"fragment" : "-std=c++11"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "COCOS2D_DEBUG=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LWS_WITH_LIBUV"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "USE_FILE32API"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "__APPLE__"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 39,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/Classes"
+				},
+				{
+					"backtrace" : 39,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/cocos/audio/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/cocos"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/extensions"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/cocos/platform"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/cocos/editor-support"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/cocos/base"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/cocos/platform/mac"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/recast/.."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/tinyxml2/."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/xxhash/."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/xxtea/."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/clipper/."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/edtaa3func/."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/ConvertUTF/."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/poly2tri/.."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/md5/.."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/unzip/."
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/Box2D/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/chipmunk/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/freetype2/include/mac/freetype2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/bullet/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/bullet/include/bullet"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/jpeg/include/mac"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/openssl/include/mac"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/uv/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/webp/include/mac"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/websockets/include/mac"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/curl/include/mac"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/png/include/mac"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/glfw3/include/mac"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/zlib/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/glsl-optimizer/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				2,
+				3,
+				4,
+				20
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "cocos2d::@b17589fc6237857a1771"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "external::@62470bbe2074d04a1904"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ext_recast::@49aedbc985f97720d891"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ext_tinyxml2::@fd6ab661f4ee25a21ef0"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ext_xxhash::@11e20b8b9139209a045a"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ext_xxtea::@95546a4b2abc077b0042"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ext_clipper::@33abc919e86db66c28b8"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ext_edtaa3func::@f3d42e550923b89477b0"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ext_convertUTF::@205c2f0e44a3b06b9b59"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ext_poly2tri::@ce0bfd23a4070be0c5de"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ext_md5::@82bef7d6fa8c2aa61808"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ext_unzip::@05a8bf1aba81c1a16e64"
+		}
+	],
+	"id" : "arkanoid::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "lib/libcocos2d.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "lib/libexternal.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/Box2D/prebuilt/mac/libbox2d.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/chipmunk/prebuilt/mac/libchipmunk.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 8,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/freetype2/prebuilt/mac/libfreetype.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "lib/libext_recast.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/bullet/prebuilt/mac/libLinearMath.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/bullet/prebuilt/mac/libBulletDynamics.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/bullet/prebuilt/mac/libBulletCollision.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/bullet/prebuilt/mac/libLinearMath.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 15,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/bullet/prebuilt/mac/libBulletMultiThreaded.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 16,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/bullet/prebuilt/mac/libMiniCL.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 17,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/jpeg/prebuilt/mac/libjpeg.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 18,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/webp/prebuilt/mac/libwebp.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 19,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/websockets/prebuilt/mac/libwebsockets.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 20,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/openssl/prebuilt/mac/libssl.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 21,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/openssl/prebuilt/mac/libcrypto.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 22,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/uv/prebuilt/mac/libuv_a.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 23,
+				"fragment" : "lib/libext_tinyxml2.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 24,
+				"fragment" : "lib/libext_xxhash.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 25,
+				"fragment" : "lib/libext_xxtea.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 26,
+				"fragment" : "lib/libext_clipper.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 27,
+				"fragment" : "lib/libext_edtaa3func.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 28,
+				"fragment" : "lib/libext_convertUTF.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 29,
+				"fragment" : "lib/libext_poly2tri.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 30,
+				"fragment" : "lib/libext_md5.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 31,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/curl/prebuilt/mac/libcurl.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 32,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/png/prebuilt/mac/libpng.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 33,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/glfw3/prebuilt/mac/libglfw3.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 34,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/zlib/prebuilt/mac/libz.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 35,
+				"fragment" : "lib/libext_unzip.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 36,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/glsl-optimizer/prebuilt/mac/libglcpp-library.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 36,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/glsl-optimizer/prebuilt/mac/libglsl_optimizer.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 36,
+				"fragment" : "/Users/fatihsevencan/Arkanoid/arkanoid/cocos2d/external/glsl-optimizer/prebuilt/mac/libmesa.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker Cocoa",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker OpenGL",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker ApplicationServices",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker IOKit",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker OpenAL",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker AudioToolbox",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker QuartzCore",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker Foundation",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker GameController",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker Metal",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Xlinker -framework -Xlinker AppKit",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 38,
+				"fragment" : "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/usr/lib/libiconv.tbd",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "arkanoid",
+	"nameOnDisk" : "arkanoid",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				21
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				2,
+				3,
+				4,
+				20
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				5,
+				6,
+				8,
+				14,
+				15,
+				18
+			]
+		},
+		{
+			"name" : "Resources",
+			"sourceIndexes" : 
+			[
+				7,
+				9,
+				10,
+				11,
+				12,
+				13,
+				16,
+				17,
+				19
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"path" : "Classes/Base/GameController/AppDelegate.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Classes/Scenes/SplashScene.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Classes/Base/GameController/AppDelegate.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Classes/Scenes/SplashScene.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "proj.ios_mac/mac/main.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "proj.ios_mac/mac/Prefix.pch",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "proj.ios_mac/mac/Icon.icns",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "proj.ios_mac/mac/Info.plist",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Resources/.DS_Store",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Resources/CloseNormal.png",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Resources/CloseSelected.png",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Resources/HelloWorld.png",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Resources/PlayButton.png",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Resources/characterSelectButton.jpg",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Resources/fonts/Marker Felt.ttf",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Resources/fonts/arial.ttf",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Resources/menuBackground.png",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Resources/missionButton.png",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Resources/res/.gitkeep",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Resources/splashBackground.png",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Classes/Scenes/MainMenuScene.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Classes/Scenes/MainMenuScene.h",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}
