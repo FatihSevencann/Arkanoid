@@ -2,51 +2,84 @@
 #include "ui/UIButton.h"
 #include <memory>
 USING_NS_CC;
-
 using namespace cocos2d::ui;
 
-Scene* GameScene::createScene(EventManager* eventManager)
+Scene* GameScene::createScene(EventManager* eventManager,Paddle* paddle,Ball* ball)
 {
     auto scene=Scene::create();
-    auto layer=GameScene::create(eventManager);
+    auto layer=GameScene::create(eventManager,paddle,ball);
     scene->addChild(layer);
+
     return scene;
 }
 
-GameScene* GameScene::create(EventManager* eventManager)
+GameScene* GameScene::create(EventManager* eventManager,Paddle* paddle,Ball* ball)
 {
     std::unique_ptr<GameScene> layer(new GameScene());
-    if (layer && layer->init(eventManager))
+
+    if (layer && layer->init(eventManager,paddle,ball))
     {
         return layer.release();
     }
+
     else
     {
         return nullptr;
     }
 }
 
-bool GameScene::init(EventManager* eventManager)
+bool GameScene::init(EventManager* eventManager,Paddle* paddle,Ball* ball)
 {
     if (!Layer::init()) {
         return false;
     }
     mEventManager = eventManager;
+    mPaddle=paddle;
+    mBall=ball;
+
     auto visibleSize = Director::getInstance()->getVisibleSize();
+
+    std::cout << "Visible Size - Width: " << visibleSize.width << " Height: " << visibleSize.height << std::endl;
+
+
     createGameLabel(visibleSize);
     createGameBackground(visibleSize);
     createBackButton(visibleSize);
 
+    createPaddle(visibleSize ,mPaddle);
+    createBall(visibleSize,mBall);
 
-
+    this->scheduleUpdate();
     return true;
 }
+
+void GameScene::update(float delta)
+{
+    if (mPaddle != nullptr)
+    {
+        mPaddle->scheduleUpdate();
+    }
+    if(mBall != nullptr)
+    {
+        mBall->scheduleUpdate();
+    }
+}
+GameScene::~GameScene() noexcept
+{
+    if (mPaddle != nullptr)
+    {
+        delete mPaddle;
+    }
+    if(mBall!= nullptr)
+    {
+        delete mBall;
+    }
 }
 
 void GameScene::createGameLabel(Size visibleSize )
 {
-    auto label = Label::createWithTTF("MAIN MENU", "fonts/arial.ttf", 30);
-    label->setPosition(Vec2(visibleSize.width*1.3f, visibleSize.height*0.8f));
+    auto label = Label::createWithTTF("GAME SCENE", "fonts/arial.ttf", 30);
+    label->setPosition(Vec2(visibleSize.width*1.7f, visibleSize.height*0.8f));
     this->addChild(label);
 }
 
@@ -67,9 +100,25 @@ void GameScene::createBackButton(Size visibleSize)
     this->addChild(backButton);
 
     backButton->addTouchEventListener([=](Ref* sender, Widget::TouchEventType type) {
-        if (type == Widget::TouchEventType::BEGAN) {
-
+        if (type == Widget::TouchEventType::BEGAN)
+        {
             mEventManager->notifyEvent(Events::GAME_BACK);
         }
     });
+}
+void GameScene::createPaddle(Size visibleSize,Paddle *paddle)
+{
+    Size mPaddleSize = paddle->getSize()*0.5f;
+    Vec2 mPaddlePosition=Vec2(visibleSize.width*1.20f,visibleSize.height*0.15);
+    paddle->setPosition(mPaddlePosition);
+    paddle->setSize(mPaddleSize);
+    this->addChild(paddle);
+}
+void GameScene::createBall(Size visibleSize,Ball *ball)
+{
+    Size mBallSize=ball->getSize()*0.5f;
+    Vec2 mBallPosition=Vec2(visibleSize.width*1.20f,visibleSize.height*0.20);
+    ball->setPosition(mBallPosition);
+    ball->setSize(mBallSize);
+    this->addChild(ball);
 }
